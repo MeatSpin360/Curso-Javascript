@@ -1,18 +1,32 @@
 //Link original y créditos a https://github.com/CodeGuppyPrograms/CodingChallenges (contiene las respuestas).
 
-/*
-Estos desafíos de coding están enfocados para los principiantes, por lo tanto las soluciones fueron implementadas
-usando  elementos de programación simples y clásicos.
-*/
+
+//Estos desafíos de coding están enfocados para los principiantes, por lo tanto las soluciones fueron implementadas
+//usando  elementos de programación simples y clásicos.
+
 
 
 //Desafío de programación #1: Imprimí los números del 1 al 10
 
 
 
+let a=10;
+while (a >= 1){
+   console.log(a);
+   a--;
+
+};
+
  //Resultado: 10 9 8 7 6 5 4 3 2 1
 
 // Desafìo de programación  #2: Imprimí los números impares del 1 al 100
+
+let b;
+for(b=1; b<=100; b++){
+   if(b%2 !== 0){
+      console.log(b);
+   };
+};
 
 // 1 3 5 ... 99
 
@@ -22,9 +36,19 @@ usando  elementos de programación simples y clásicos.
 // 7x1 = 7
 // ...
 // 7x9 = 63
+let c=0;
+for(c=0; c<=10; c++){
+   console.log(`7x${c} = `, 7*c)
+};
 
 //Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
+let d=0;
+for(d=0; d<=10; d++){
+   for(e=0; e<=10; e++){
+      console.log(`${d}x${e} = `, (d*e))
+   };
+};
  //1x0 = 0
  //...
  //1x9 = 9
@@ -37,6 +61,12 @@ usando  elementos de programación simples y clásicos.
 
 //Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  //[1,2,3,4,5,6,7,8,9,10]
+let sumatoria = 0;
+ let f=[1,2,3,4,5,6,7,8,9,10];
+   for (a=0; a < f.length; a++) {
+       sumatoria = sumatoria + f[a];
+   };
+   console.log(sumatoria);
 
 //1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
 
@@ -44,17 +74,67 @@ usando  elementos de programación simples y clásicos.
 
  //10 * 9 * 8 * ... * 1
 
+ let g = [10,9,8,7,6,5,4,3,2,1];
+
+ function FactorialArray(fa){
+   let ResultadoFactorial = fa.reduce((a, b) => a*b, 0)
+   console.log(`10! es ${ResultadoFactorial}`)
+ };
+FactorialArray(g);
+
+
+
 //Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+let H = [];
+for(h=10; h<=30; h++){
+   if(h%2 !== 0){
+      H.push(h);
+   };
+};
+console.log(H);
+console.log(`la suma de los impares entre 10 y 30 es ${H.reduce((a, b,) => a + b, 0)}`);
+
+
 
 //Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
+function FaC(arg){
+   console.log(`${arg}°F son ${((arg-32) / 1.8)}°C`)
+};
+
 //Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
 
+function CaF(arg){
+   console.log(`${arg}°C son ${(arg*1.8) + 32}°F`)
+};
+
 //desafío de programación #10: Calcula la suma de todos los números en un array de números
+sumatoria = 0;
+   for (a=0; a < f.length; a++) {
+       sumatoria = sumatoria + f[a];
+   };
+   console.log(sumatoria);
+
+
 
 //Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
 
-//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+function promedioArray2(i){
+   let sumatoriaa = i.reduce((j, k) => j + k, 0);
+   promedio = sumatoriaa / i.length 
+   console.log(promedio);
+};
+ promedioArray2(H);
+
+
+//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo 
+//solo los números positivos
+
+let l = [];
+let m=0;
+
+for(a=0; a<= )
+
 
 //Desafío de programación #13: Find the maximum number in an array of numbers
 
