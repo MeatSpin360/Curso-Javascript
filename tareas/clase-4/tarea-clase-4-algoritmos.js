@@ -127,16 +127,39 @@ function promedioArray2(i){
  promedioArray2(H);
 
 
-//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo 
-//solo los números positivos
+//Desafío de programación #12: Crea una función que reciba un array de números y devuelva
+// un array conteniendo solo los números positivos
 
 let l = [];
-let m=0;
+let m = [];
+let o = [];
 
-for(a=0; a<= )
+document.querySelector('#CalcularArrays').onclick = function() {
+
+
+   for(zzz = Number(document.querySelector('#desde').value); zzz <= Number(document.querySelector('#hasta').value); zzz++){
+      l.push(zzz);
+   };
+   for(zz = 0; zz <= l.length-1; zz++){
+      if (l[zz]%2 !== 0){
+      m.push(l[zz]);
+      };
+      if (l[zz] > 0){
+      o.push(l[zz]);
+      };
+   };
+   document.querySelector('#primerArray').innerText = l;
+   document.querySelector('#segundoArray').innerText = m;
+   document.querySelector('#tercerArray').innerText = o;
+};
 
 
 //Desafío de programación #13: Find the maximum number in an array of numbers
+document.querySelector('#MaxArray').onclick = function(){
+
+   document.querySelector('#ValorMaxArray').innerText = `El valor maximo del array es ${Math.max(...l)}`;
+};
+
 
 //Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
