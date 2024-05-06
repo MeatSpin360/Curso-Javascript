@@ -135,22 +135,40 @@ let m = [];
 let o = [];
 
 document.querySelector('#CalcularArrays').onclick = function() {
-
-
-   for(zzz = Number(document.querySelector('#desde').value); zzz <= Number(document.querySelector('#hasta').value); zzz++){
-      l.push(zzz);
+l = [];
+m = [];
+o = [];
+   if(Number(document.querySelector('#desde').value) <= Number(document.querySelector('#hasta').value)) {
+      for(zzz = Number(document.querySelector('#desde').value); zzz <= Number(document.querySelector('#hasta').value); zzz++){
+         l.push(zzz);
+         };
+         for(zz = 0; zz <= l.length-1; zz++){
+            if (l[zz]%2 !== 0){
+            m.push(l[zz]);
+            };
+            if (l[zz] > 0){
+            o.push(l[zz]);
+            };
+         };      
+   }else if(Number(document.querySelector('#desde').value > Number(document.querySelector('#hasta').value))) {
+      for(zzz = Number(document.querySelector('#desde').value); zzz >= Number(document.querySelector('#hasta').value); zzz--){
+         l.push(zzz);
+         };
+         for(zz = 0; zz <= l.length-1; zz++){
+            if (l[zz]%2 !== 0){
+            m.push(l[zz]);
+            };
+            if (l[zz] > 0){
+            o.push(l[zz]);
+            };
+         };
+     
    };
-   for(zz = 0; zz <= l.length-1; zz++){
-      if (l[zz]%2 !== 0){
-      m.push(l[zz]);
-      };
-      if (l[zz] > 0){
-      o.push(l[zz]);
-      };
-   };
+
    document.querySelector('#primerArray').innerText = l;
    document.querySelector('#segundoArray').innerText = m;
    document.querySelector('#tercerArray').innerText = o;
+
 };
 
 
@@ -163,10 +181,32 @@ document.querySelector('#MaxArray').onclick = function(){
 
 //Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
+
+
+function fibonacci(r){
+   let p=[0, 1];
+   for(q=2; q<=r; q++){
+      p[q] = p[q-1] + p[q-2];
+   };
+   console.log(p);
+};
+
+fibonacci(10);
+
+
 //Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
 //El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
 
 //Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+
+
+const fibonacciconrecursion = s => {
+   if (s < 2) return s;
+      return fibonacciconrecursion(s-2) + fibonacciconrecursion(s-1)
+};
+
+
+fibonacciconrecursion(7);
 
 //Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 
