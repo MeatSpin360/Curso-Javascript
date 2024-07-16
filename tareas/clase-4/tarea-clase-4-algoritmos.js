@@ -181,8 +181,6 @@ document.querySelector('#MaxArray').onclick = function(){
 
 //Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
-
-
 function fibonacci(r){
    let p=[0, 1];
    for(q=2; q<=r; q++){
@@ -199,16 +197,76 @@ fibonacci(10);
 
 //Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
+/*OPCION 1
 
-const fibonacciconrecursion = s => {
-   if (s < 2) return s;
-      return fibonacciconrecursion(s-2) + fibonacciconrecursion(s-1)
+document.querySelector('#calcularfibo').onclick = function(){
+
+   
+   let s=[0, 1];
+   
+   let u=Number(document.querySelector('#posicion-fibo').value);
+   
+   
+   function fiborecursion(t){
+      if(t==0){
+         document.querySelector('#ver-fibo').innerText = `Solo numeros mayores o iguales a 1`; 
+      } else if(s.length>=t){
+         document.querySelector('#ver-fibo').innerText = `El valor de la posicion dela serie de fibonacci que elegiste es ${s[t-1]}`; 
+            } else {
+               s[s.length]=s[s.length-1]+s[s.length-2];
+               fiborecursion(t);
+            };
+   
+      };
+
+fiborecursion(u);
+
 };
 
+*/
 
-fibonacciconrecursion(7);
+//OPCION 2
+
+document.querySelector('#calcularfibo').onclick = function(){
+
+   let u=Number(document.querySelector('#posicion-fibo').value);
+
+   function fiborecursiva(t){
+      if(t<=1){
+         return t;
+      } else {
+         return fiborecursiva(t-1) + fiborecursiva(t-2);
+      };  
+   };
+   function valordefibo(v){
+      for (let s=0; s<v; s++){
+         console.log(fiborecursiva(s));
+         };
+      };
+   valordefibo(u);
+};
 
 //Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+
+document.querySelector('#primos').onclick = function(){
+
+   let w=Number(document.querySelector('#numeroprimo?').value);
+   
+
+   function primitos(z1){
+      if(z1<=3){
+
+      };
+      for(y=4; y<z1; y++) {
+         if(x%w === 0){
+
+         };
+   };
+   
+   };
+
+   primitos(w);
+};
 
 //Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 //Ejemplo:

@@ -41,7 +41,7 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
+/*
 
 let comidasFavoritas = ['poyito', 'milanga', 'arroz', 'papa'];
 let Precio = ['$30', '$45', '$15', '$23'];
@@ -90,7 +90,7 @@ console.log(comidasFavoritas[4])
 };
 
 
-
+*/
 
 /*
     Tamaño del Array
@@ -109,7 +109,7 @@ console.log(comidasFavoritas[4])
 // imprimi utilizando console.log el resultado.
 
 
-console.log(comidasFavoritas.length);
+//console.log(comidasFavoritas.length);
 
 
 
@@ -134,7 +134,7 @@ console.log(comidasFavoritas.length);
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-console.log(comidasFavoritas[2]);
+//console.log(comidasFavoritas[2]);
 
 
 /*
@@ -164,7 +164,7 @@ console.log(comidasFavoritas[2]);
 
 // TAREA: console.log todo el array para verificar.
 
-console.log(comidasFavoritas)
+//console.log(comidasFavoritas)
 
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
@@ -187,14 +187,14 @@ console.log(comidasFavoritas)
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
 
-comidasFavoritas.push('bondiola');
+//comidasFavoritas.push('bondiola');
 
 
 
 // TAREA: console.log todo el array para verificar.
 
 
-console.log(comidasFavoritas);
+//console.log(comidasFavoritas);
 
 
 
@@ -376,7 +376,7 @@ console.log(B === 7);
 
 // TAREA: Probalo con tu comidasFavoritas array.
 
-
+/*
 
 
 for (let i = 0; i < comidasFavoritas.length; i++) {
@@ -384,7 +384,7 @@ for (let i = 0; i < comidasFavoritas.length; i++) {
 };
 
 
-
+*/
 /*
     Bucles y Logica
     ===============
@@ -425,12 +425,16 @@ for (let i = 0; i < comidasFavoritas.length; i++) {
 
 let numerete
 
-for (numerete = 1; numerete < 50; numerete++) {
+for (numerete = 1; numerete <= 50; numerete++) {
     if (numerete%3 == 0 && numerete%5 == 0){
-        console.log('FizzBuzz')
-    }else if (numerete%3 == 0 || numerete%5 == 0) {
-        console.log('Fizz') || console.log('Buzz')
-    } else {console.log(numerete)}  
+        console.log('FizzBuzz');
+    }else if (numerete%3 == 0){
+        console.log('Fizz');
+        } else if (numerete%5 == 0) {
+            console.log('Buzz');
+        } else {
+            console.log(numerete);
+        };
 };
 
 
