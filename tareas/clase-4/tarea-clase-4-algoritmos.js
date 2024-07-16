@@ -197,7 +197,7 @@ fibonacci(10);
 
 //Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
 
-/*OPCION 1
+//OPCION 1
 
 document.querySelector('#calcularfibo').onclick = function(){
 
@@ -211,7 +211,7 @@ document.querySelector('#calcularfibo').onclick = function(){
       if(t==0){
          document.querySelector('#ver-fibo').innerText = `Solo numeros mayores o iguales a 1`; 
       } else if(s.length>=t){
-         document.querySelector('#ver-fibo').innerText = `El valor de la posicion dela serie de fibonacci que elegiste es ${s[t-1]}`; 
+         document.querySelector('#ver-fibo').innerText = `El valor de la posicion que elegiste es ${s[t-1]}`; 
             } else {
                s[s.length]=s[s.length-1]+s[s.length-2];
                fiborecursion(t);
@@ -223,7 +223,7 @@ fiborecursion(u);
 
 };
 
-*/
+
 
 //OPCION 2
 
@@ -250,22 +250,8 @@ document.querySelector('#calcularfibo').onclick = function(){
 
 document.querySelector('#primos').onclick = function(){
 
-   let w=Number(document.querySelector('#numeroprimo?').value);
+   let w=Number(document.querySelector('#numeroprimo').value);
    
-
-   function primitos(z1){
-      if(z1<=3){
-
-      };
-      for(y=4; y<z1; y++) {
-         if(x%w === 0){
-
-         };
-   };
-   
-   };
-
-   primitos(w);
 };
 
 //Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
