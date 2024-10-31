@@ -1,3 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .oculto {
     display: none;
+}
+
+body {
+    align-items: center;
+    background: rgb(37, 37, 37);
+}
+
+header {
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    text-align: center;
+}
+#paciente-nuevo {
+    align-items: center;
 }
