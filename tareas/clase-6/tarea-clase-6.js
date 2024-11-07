@@ -6,7 +6,13 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
-
+const input = document.querySelector("#phone");
+let iti = window.intlTelInput(input, {
+    nationalMode:false,
+    initialCountry: 'ar',
+    autoPlaceholder: 'off',
+    loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.1/build/js/utils.js",
+});
 
 document.querySelector('#paciente-nuevo').onclick = function(event) {
     document.querySelector('#NombreDelPaciente').className = "";
@@ -23,13 +29,14 @@ document.querySelector('#nombreOK').onclick = function(event) {
 
 const info = document.querySelector(".alert-info");
 
-function process(event) {
+
+document.querySelector('#login').onsubmit = (event) => {
     event.preventDefault();
-    const phoneNumber = phoneInput.getNumber();
+    const phoneNumber = iti.getNumber();
     info.style.display = "";
     info.innerHTML = `Phone number in E.164 format: <strong>${phoneNumber}</strong>`;
 
-    
+    console.log(phoneNumber);
 };
 
 
